@@ -1,0 +1,73 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :dateRunsFrom %><br>
+    <%= f.date_select :dateRunsFrom %>
+  </div>
+  <div class="field">
+    <%= f.label :dateRunsTo %><br>
+    <%= f.date_select :dateRunsTo %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br>
+    <%= f.text_field :hours %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :openTo %><br>
+    <%= f.text_field :openTo %>
+  </div>
+  <div class="field">
+    <%= f.label :awards %><br>
+    <%= f.check_box :awards %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
