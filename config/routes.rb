@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/temp'
+
   get 'pages/landing'
 
   devise_for :users
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
   resources :events
   get 'pages/about'
 
-  root 'events#index'
+  root 'pages#temp'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
